@@ -35,6 +35,11 @@ assert len(app.tabs) == 4
 for threshold in [0., 1., .3]:
     app.slider[0].set_value(threshold).run()
     assert not app.exception, app.exception
+    assert not app.get('doc_string'), 'Internal object documentation leaked into UI'
+    if threshold == 0.:
+        assert app.success[0].value == 'Рекомендовать в подборку'
+    elif threshold == 1.:
+        assert app.info[0].value == 'Не включать в подборку'
 print('Streamlit: four tabs and threshold changes passed')
 
 # Проверяем чистую функцию обработки CSV, не запуская UI повторно.

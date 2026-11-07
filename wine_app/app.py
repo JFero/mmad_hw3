@@ -74,7 +74,10 @@ with single:
                     format='%.5f')
     single_prob = float(model.predict_proba(pd.DataFrame([values], columns=features))[0, 1])
     st.metric('Вероятность хорошего вина', f'{single_prob:.1%}')
-    st.success('Рекомендовать в подборку') if single_prob >= threshold else st.info('Не включать в подборку')
+    if single_prob >= threshold:
+        st.success('Рекомендовать в подборку')
+    else:
+        st.info('Не включать в подборку')
 
 with evaluation:
     pred = prob >= threshold
