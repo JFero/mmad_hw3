@@ -58,7 +58,10 @@ free_sulfur_dioxide, total_sulfur_dioxide, density, pH, sulphates, alcohol, is_r
 
 ## Публикация в Streamlit Community Cloud (4.6)
 
-Публичный деплой пока **не выполнен**: необходимы аккаунт и GitHub-репозиторий.
+Приложение опубликовано: [Винная подборка](https://triple-t-mmad-hw3.streamlit.app/).
+Репозиторий: [JFero/mmad_hw3](https://github.com/JFero/mmad_hw3).
+
+Ниже приведён порядок повторного деплоя:
 
 1. Добавьте папку `wine_app` со всеми артефактами в свой GitHub-репозиторий.
 2. Откройте [Streamlit Community Cloud](https://share.streamlit.io/) и создайте приложение.
